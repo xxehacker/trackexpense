@@ -1,1 +1,1 @@
-export const BASE_URL = "http://localhost:9000/api/v1";
+export const BASE_URL = "https://money-hack-backend.vercel.app/api/v1";
