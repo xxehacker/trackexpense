@@ -10,13 +10,13 @@ const contactRouter = require("./routes/contact.routes");
 
 // Access Environment Variables
 const PORT = process.env.PORT || 8000;
-// const MONGO_URL = process.env.MONGO_URL;
 
 const app = express();
 
 // db connection
+const mongoURI = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster.mongodb.net/moneyhack?retryWrites=true&w=majority&appName=Cluster0`;
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(mongoURI)
   .then(() => console.log("DB Connected"))
   .catch((e) => console.log(e));
 
@@ -29,7 +29,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-
 // all api routes
 app.get("/", (req, res) => {
   res.send("Hello World");
@@ -38,8 +37,6 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/categories", categoryRouter);
 app.use("/api/v1/transactions", transactionRouter);
 app.use("/api/v1/contact", contactRouter);
-
-
 
 // Start the server
 app.listen(PORT, () =>
