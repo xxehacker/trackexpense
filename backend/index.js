@@ -14,9 +14,9 @@ const PORT = process.env.PORT || 8000;
 const app = express();
 
 // db connection
-const mongoURI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster.mongodb.net/moneyhack?retryWrites=true&w=majority&appName=Cluster0`;
+
 mongoose
-  .connect(mongoURI)
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("DB Connected"))
   .catch((e) => console.log(e));
 
