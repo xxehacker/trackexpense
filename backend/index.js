@@ -23,7 +23,7 @@ mongoose
 
 // middlewares
 const corsOptions = {
-  origin: ["http://localhost:5173"],
+  origin: ["https://money-hack-fronend.vercel.app"],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
 };
@@ -37,7 +37,6 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/categories", categoryRouter);
 app.use("/api/v1/transactions", transactionRouter);
 app.use("/api/v1/contact", contactRouter);
-
 
 // app.use(express.static(path.join(_dirname, "../frontend/dist")));
 // app.use("*", (req, res) => {
