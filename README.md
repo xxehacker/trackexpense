@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="https://github.com/xxehacker/MoneyHack/blob/main/download.svg" alt="moneyhack-banner" width="800">
+	<img src="https://github.com/xxehacker/MoneyHack/blob/main/money.png" alt="moneyhack-banner" width="800">
 </p>
 <p align="center">
 	<em><code>❯ Smart Finance Tracker – A Powerful MERN Stack Solution for Seamless Expense Management </code></em>
